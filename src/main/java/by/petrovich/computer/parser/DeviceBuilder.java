@@ -6,6 +6,7 @@ import by.petrovich.computer.exception.DeviceException;
 import java.util.List;
 
 public interface DeviceBuilder {
-    void deviceBuild(String filePath)throws DeviceException;
+    void deviceSaxBuilder(String filePath) throws DeviceException;
+
     List<Device> getDevices();
 }
