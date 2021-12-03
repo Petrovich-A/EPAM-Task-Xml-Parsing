@@ -3,28 +3,152 @@
          xmlns="http://www.example.com/computers"
          xsi:schemaLocation="http://www.example.com/computers computers.xsd">
 
-    <cpu id="ID1" picture="fir.png">
-        <name>ASRock</name>
+    <cpu id="ID1" picture="pic1.png">
+        <name>AMD A4-5300 APU OEM</name>
         <delivery-date>2021-10-03</delivery-date>
         <country>Canada</country>
         <price>65.24</price>
         <atribute>
             <peripheral>in case</peripheral>
-            <port>SATA</port>
+            <port>FM2</port>
         </atribute>
         <critical>true</critical>
-        <sequanse>1800</sequanse>
+        <sequanse>5300</sequanse>
     </cpu>
-    <hdd id="ID2" picture="fir.png">
-        <name>AMD</name>
-        <delivery-date>2021-01-08</delivery-date>
+
+    <cpu id="ID2" picture="pic2.png">
+        <name>Intel Xeon Gold 6238</name>
+        <delivery-date>2020-10-03</delivery-date>
+        <country>Israel</country>
+        <price>63.99</price>
+        <atribute>
+            <peripheral>in case</peripheral>
+            <port>LGA3647</port>
+        </atribute>
+        <critical>true</critical>
+        <sequanse>2100</sequanse>
+    </cpu>
+
+    <cpu id="ID3">
+        <name>Intel Xeon Bronze 3206R</name>
+        <delivery-date>2020-01-03</delivery-date>
+        <country>Israel</country>
+        <price>103.58</price>
+        <atribute>
+            <peripheral>in case</peripheral>
+            <port>LGA3647</port>
+        </atribute>
+        <critical>true</critical>
+        <sequanse>1900</sequanse>
+    </cpu>
+
+    <cpu id="ID4">
+        <name>Intel Core i9-10900X</name>
+        <delivery-date>2020-05-23</delivery-date>
+        <country>Canada</country>
+        <price>128</price>
+        <atribute>
+            <peripheral>in case</peripheral>
+            <port>LGA2066</port>
+        </atribute>
+        <critical>true</critical>
+        <sequanse>3700</sequanse>
+    </cpu>
+
+    <cpu id="ID5">
+        <name>Intel Xeon E5-2630 V3</name>
+        <delivery-date>2020-05-30</delivery-date>
+        <country>Canada</country>
+        <price>99.99</price>
+        <atribute>
+            <peripheral>in case</peripheral>
+            <port>LGA2011-3</port>
+        </atribute>
+        <critical>true</critical>
+        <sequanse>2400</sequanse>
+    </cpu>
+
+    <cpu id="ID6">
+        <name>Intel Core i7-12700KF</name>
+        <delivery-date>2020-04-15</delivery-date>
+        <country>Canada</country>
+        <price>78.20</price>
+        <atribute>
+            <peripheral>in case</peripheral>
+            <port>LGA1700</port>
+        </atribute>
+        <critical>true</critical>
+        <sequanse>2700</sequanse>
+    </cpu>
+
+    <cpu id="ID7">
+        <name>Intel Core i3-10105</name>
+        <delivery-date>2019-07-15</delivery-date>
+        <country>Canada</country>
+        <price>178.20</price>
+        <atribute>
+            <peripheral>in case</peripheral>
+            <port>LGA1200</port>
+        </atribute>
+        <critical>true</critical>
+        <sequanse>3700</sequanse>
+    </cpu>
+
+    <cpu id="ID8">
+        <name>Intel Xeon E3-1245 V6</name>
+        <delivery-date>2019-07-15</delivery-date>
+        <country>Canada</country>
+        <price>118.1</price>
+        <atribute>
+            <peripheral>in case</peripheral>
+            <port>LGA1151</port>
+        </atribute>
+        <critical>true</critical>
+        <sequanse>3700</sequanse>
+    </cpu>
+
+    <hdd id="ID9" picture="pic9.png">
+        <name>Seagate Exos X16</name>
+        <delivery-date>2020-03-01</delivery-date>
         <country>USA</country>
-        <price>65.24</price>
+        <price>78.45</price>
         <atribute>
             <peripheral>in case</peripheral>
             <port>SATA</port>
         </atribute>
         <critical>true</critical>
-        <volume>1800</volume>
+        <volume>16</volume>
     </hdd>
+
+    <hdd id="ID10" picture="pic10.png">
+        <name>Seagate Exos X16</name>
+        <delivery-date>2020-05-28</delivery-date>
+        <country>USA</country>
+        <price>78.0</price>
+        <atribute>
+            <peripheral>in case</peripheral>
+            <port>USB</port>
+        </atribute>
+        <critical>true</critical>
+        <volume>14</volume>
+    </hdd>
+
+    <hdd id="ID11" picture="pic11.png">
+        <name>Toshiba MG07ACA12TE</name>
+        <delivery-date>2020-07-28</delivery-date>
+        <country>USA</country>
+        <price>99.0</price>
+        <atribute>
+            <peripheral>in case</peripheral>
+            <port>SATA</port>
+        </atribute>
+        <critical>true</critical>
+        <volume>12</volume>
+    </hdd>
+
+
+
+
+
+
 </devices>
