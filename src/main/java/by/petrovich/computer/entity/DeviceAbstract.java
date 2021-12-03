@@ -3,7 +3,7 @@ package by.petrovich.computer.entity;
 import by.petrovich.computer.entity.type.Country;
 import by.petrovich.computer.entity.type.Peripheral;
 
-public abstract class Device {
+public abstract class DeviceAbstract {
     public static final String DEFAULT_PICTURE = "pic.png";
     private String deviceId;
     private String picture;
@@ -15,10 +15,10 @@ public abstract class Device {
     private String port;
     private boolean critical;
 
-    protected Device() {
+    protected DeviceAbstract() {
     }
 
-    public Device(String deviceId, String picture, String name, String deliveryDate, Country country, String price, Peripheral peripheral, String port, boolean critical) {
+    public DeviceAbstract(String deviceId, String picture, String name, String deliveryDate, Country country, String price, Peripheral peripheral, String port, boolean critical) {
         this.deviceId = deviceId;
         this.picture = picture;
         this.name = name;
@@ -109,9 +109,9 @@ public abstract class Device {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Device)) return false;
+        if (!(o instanceof DeviceAbstract)) return false;
 
-        Device device = (Device) o;
+        DeviceAbstract device = (DeviceAbstract) o;
 
         if (isCritical() != device.isCritical()) return false;
         if (getDeviceId() != null ? !getDeviceId().equals(device.getDeviceId()) : device.getDeviceId() != null)

@@ -8,12 +8,12 @@
         <delivery-date>2021-10-03</delivery-date>
         <country>Canada</country>
         <price>65.24</price>
-        <atribute>
+        <property>
             <peripheral>in case</peripheral>
             <port>FM2</port>
-        </atribute>
+        </property>
         <critical>true</critical>
-        <sequanse>5300</sequanse>
+        <frequency>5300</frequency>
     </cpu>
 
     <cpu id="ID2" picture="pic2.png">
@@ -21,12 +21,12 @@
         <delivery-date>2020-10-03</delivery-date>
         <country>Israel</country>
         <price>63.99</price>
-        <atribute>
+        <property>
             <peripheral>in case</peripheral>
             <port>LGA3647</port>
-        </atribute>
+        </property>
         <critical>true</critical>
-        <sequanse>2100</sequanse>
+        <frequency>2100</frequency>
     </cpu>
 
     <cpu id="ID3">
@@ -34,12 +34,12 @@
         <delivery-date>2020-01-03</delivery-date>
         <country>Israel</country>
         <price>103.58</price>
-        <atribute>
+        <property>
             <peripheral>in case</peripheral>
             <port>LGA3647</port>
-        </atribute>
+        </property>
         <critical>true</critical>
-        <sequanse>1900</sequanse>
+        <frequency>1900</frequency>
     </cpu>
 
     <cpu id="ID4">
@@ -47,12 +47,12 @@
         <delivery-date>2020-05-23</delivery-date>
         <country>Canada</country>
         <price>128</price>
-        <atribute>
+        <property>
             <peripheral>in case</peripheral>
             <port>LGA2066</port>
-        </atribute>
+        </property>
         <critical>true</critical>
-        <sequanse>3700</sequanse>
+        <frequency>3700</frequency>
     </cpu>
 
     <cpu id="ID5">
@@ -60,12 +60,12 @@
         <delivery-date>2020-05-30</delivery-date>
         <country>Canada</country>
         <price>99.99</price>
-        <atribute>
+        <property>
             <peripheral>in case</peripheral>
             <port>LGA2011-3</port>
-        </atribute>
+        </property>
         <critical>true</critical>
-        <sequanse>2400</sequanse>
+        <frequency>2400</frequency>
     </cpu>
 
     <cpu id="ID6">
@@ -73,12 +73,12 @@
         <delivery-date>2020-04-15</delivery-date>
         <country>Canada</country>
         <price>78.20</price>
-        <atribute>
+        <property>
             <peripheral>in case</peripheral>
             <port>LGA1700</port>
-        </atribute>
+        </property>
         <critical>true</critical>
-        <sequanse>2700</sequanse>
+        <frequency>2700</frequency>
     </cpu>
 
     <cpu id="ID7">
@@ -86,12 +86,12 @@
         <delivery-date>2019-07-15</delivery-date>
         <country>Canada</country>
         <price>178.20</price>
-        <atribute>
+        <property>
             <peripheral>in case</peripheral>
             <port>LGA1200</port>
-        </atribute>
+        </property>
         <critical>true</critical>
-        <sequanse>3700</sequanse>
+        <frequency>3700</frequency>
     </cpu>
 
     <cpu id="ID8">
@@ -99,12 +99,12 @@
         <delivery-date>2019-07-15</delivery-date>
         <country>Canada</country>
         <price>118.1</price>
-        <atribute>
+        <property>
             <peripheral>in case</peripheral>
             <port>LGA1151</port>
-        </atribute>
+        </property>
         <critical>true</critical>
-        <sequanse>3700</sequanse>
+        <frequency>3700</frequency>
     </cpu>
 
     <hdd id="ID9" picture="pic9.png">
@@ -112,10 +112,10 @@
         <delivery-date>2020-03-01</delivery-date>
         <country>USA</country>
         <price>78.45</price>
-        <atribute>
+        <property>
             <peripheral>in case</peripheral>
             <port>SATA</port>
-        </atribute>
+        </property>
         <critical>true</critical>
         <volume>16</volume>
     </hdd>
@@ -125,10 +125,10 @@
         <delivery-date>2020-05-28</delivery-date>
         <country>USA</country>
         <price>78.0</price>
-        <atribute>
+        <property>
             <peripheral>in case</peripheral>
             <port>USB</port>
-        </atribute>
+        </property>
         <critical>true</critical>
         <volume>14</volume>
     </hdd>
@@ -138,10 +138,10 @@
         <delivery-date>2020-07-28</delivery-date>
         <country>USA</country>
         <price>99.0</price>
-        <atribute>
+        <property>
             <peripheral>in case</peripheral>
             <port>SATA</port>
-        </atribute>
+        </property>
         <critical>true</critical>
         <volume>12</volume>
     </hdd>

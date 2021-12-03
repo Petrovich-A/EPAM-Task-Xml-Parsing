@@ -3,7 +3,7 @@ package by.petrovich.computer.entity;
 import by.petrovich.computer.entity.type.Country;
 import by.petrovich.computer.entity.type.Peripheral;
 
-public class Hdd extends Device {
+public class Hdd extends DeviceAbstract {
     private int volume;
 
     public Hdd() {

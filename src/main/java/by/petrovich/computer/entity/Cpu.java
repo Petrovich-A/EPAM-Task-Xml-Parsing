@@ -3,7 +3,7 @@ package by.petrovich.computer.entity;
 import by.petrovich.computer.entity.type.Country;
 import by.petrovich.computer.entity.type.Peripheral;
 
-public class Cpu extends Device {
+public class Cpu extends DeviceAbstract {
     private int sequanse;
 
     public Cpu() {

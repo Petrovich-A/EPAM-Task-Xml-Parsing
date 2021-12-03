@@ -1,6 +1,6 @@
 package by.petrovich.computer.parser;
 
-import by.petrovich.computer.entity.Device;
+import by.petrovich.computer.entity.DeviceAbstract;
 import by.petrovich.computer.exception.DeviceException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,7 +15,7 @@ import java.util.List;
 
 public class DeviceSaxBuilder implements DeviceBuilder {
     private static final Logger logger = LogManager.getLogger();
-    private List<Device> devices;
+    private List<DeviceAbstract> devices;
 
     @Override
     public void deviceSaxBuilder(String filePath) throws DeviceException {
@@ -38,7 +38,7 @@ public class DeviceSaxBuilder implements DeviceBuilder {
     }
 
     @Override
-    public List<Device> getDevices() {
+    public List<DeviceAbstract> getDevices() {
         return devices;
     }
 }
