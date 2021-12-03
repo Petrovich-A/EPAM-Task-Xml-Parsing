@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.example.com/computers"
+         xsi:schemaLocation="http://www.example.com/computers computers.xsd">
+
+    <cpu id="ID1" picture="fir.png">
+        <name>ASRock</name>
+        <delivery-date>2021-10-03</delivery-date>
+        <country>Canada</country>
+        <price>65.24</price>
+        <atribute>
+            <peripheral>in case</peripheral>
+            <port>SATA</port>
+        </atribute>
+        <critical>true</critical>
+        <sequanse>1800</sequanse>
+    </cpu>
+    <hdd id="ID2" picture="fir.png">
+        <name>AMD</name>
+        <delivery-date>2021-01-08</delivery-date>
+        <country>USA</country>
+        <price>65.24</price>
+        <atribute>
+            <peripheral>in case</peripheral>
+            <port>SATA</port>
+        </atribute>
+        <critical>true</critical>
+        <volume>1800</volume>
+    </hdd>
+</devices>
