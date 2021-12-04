@@ -2,6 +2,7 @@ package by.petrovich.computer.parser;
 
 import by.petrovich.computer.entity.DeviceAbstract;
 import by.petrovich.computer.exception.DeviceException;
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
@@ -26,7 +27,7 @@ public class DeviceSaxBuilder implements DeviceBuilder {
             var handler = new DeviceHandler();
             reader.setContentHandler(handler);
             reader.parse(filePath);
-//devices = handler
+            devices = handler.getDevicesAbstracts();
         } catch (ParserConfigurationException e) {
             throw new DeviceException("", e);
         } catch (EnumConstantNotPresentException | SAXException e) {
@@ -34,6 +35,7 @@ public class DeviceSaxBuilder implements DeviceBuilder {
         } catch (IOException e) {
             throw new DeviceException("", e);
         }
+        logger.log(Level.INFO, "Devices are created");
 
     }
 
