@@ -27,7 +27,7 @@ public class DeviceSaxBuilder implements DeviceBuilder {
             var handler = new DeviceHandler();
             reader.setContentHandler(handler);
             reader.parse(filePath);
-            devices = handler.getDevicesAbstracts();
+            devices = handler.getDevices();
         } catch (ParserConfigurationException e) {
             throw new DeviceException("", e);
         } catch (EnumConstantNotPresentException | SAXException e) {

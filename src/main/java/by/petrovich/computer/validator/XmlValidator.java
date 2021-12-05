@@ -21,7 +21,7 @@ public class XmlValidator {
 
     public boolean isFileValid(String xmlFilePath, String xsdFilePath) {
         boolean result = true;
-        SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI);
+        SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 
         try {
             Schema schema = schemaFactory.newSchema(new File(xsdFilePath));
