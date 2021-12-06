@@ -16,6 +16,19 @@
         <frequency>5300</frequency>
     </cpu>
 
+    <hdd id="ID9" picture="pic9.png">
+        <name>Seagate Exos X16 </name>
+        <delivery-date>2020-03-01</delivery-date>
+        <country>USA</country>
+        <price>78.45</price>
+        <property>
+            <peripheral>in case</peripheral>
+            <port>SATA</port>
+        </property>
+        <critical>true</critical>
+        <volume>16</volume>
+    </hdd>
+
     <cpu id="ID2" picture="pic2.png">
         <name>Intel Xeon Gold 6238</name>
         <delivery-date>2020-10-03</delivery-date>
@@ -107,18 +120,7 @@
         <frequency>3700</frequency>
     </cpu>
 
-    <hdd id="ID9" picture="pic9.png">
-        <name>Seagate Exos X16</name>
-        <delivery-date>2020-03-01</delivery-date>
-        <country>USA</country>
-        <price>78.45</price>
-        <property>
-            <peripheral>in case</peripheral>
-            <port>SATA</port>
-        </property>
-        <critical>true</critical>
-        <volume>16</volume>
-    </hdd>
+
 
     <hdd id="ID10" picture="pic10.png">
         <name>Seagate Exos X16</name>
