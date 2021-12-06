@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.example.com/computers"
+         xsi:schemaLocation="http://www.example.com/computers computers.xsd">
+
+    <cpu id="ID1" picture="pic1.png">
+        <name>AMD A4-5300 APU OEM</name>
+        <delivery-date>2021-10-03</delivery-date>
+        <country>Canada</country>
+        <price>65.24</price>
+        <property>
+            <peripheral>in case</peripheral>
+            <port>FM2</port>
+        </property>
+        <critical>true</critical>
+        <frequency>5300</frequency>
+    </cpu>
+
+    <hdd id="ID9" picture="pic9.png">
+        <name>Seagate Exos X16</name>
+        <delivery-date>2020-03-01</delivery-date>
+        <country>USA</country>
+        <price>78.45</price>
+        <property>
+            <peripheral>in case</peripheral>
+            <port>SATA</port>
+        </property>
+        <critical>true</critical>
+        <volume>16</volume>
+    </hdd>
+
+</devices>

@@ -33,7 +33,7 @@ public class DeviceHandler extends DefaultHandler {
 
     public DeviceHandler() {
         devices = new ArrayList<>();
-        withText = EnumSet.range(DeviceTag.NAME, DeviceTag.CRITICAL);
+//        withText = EnumSet.range(DeviceTag.NAME, DeviceTag.VOLUME);
     }
 
     public List<DeviceAbstract> getDevices() {
@@ -74,9 +74,9 @@ public class DeviceHandler extends DefaultHandler {
             }
         } else {
             DeviceTag deviceTag = DeviceTag.valueOf(name);
-            if (withText.contains(deviceTag)) {
+//            if (withText.contains(deviceTag)) {
                 currentTag = deviceTag;
-            }
+//            }
         }
         logger.info("DeviceHandler: " + name.trim());
     }
@@ -137,7 +137,7 @@ public class DeviceHandler extends DefaultHandler {
                 case FREQUENCY:
                     Cpu cpu = (Cpu) currentDevice;
                     String frequency = data.toUpperCase(Locale.ROOT);
-                    cpu.setSequanse(Integer.parseInt(frequency));
+                    cpu.setFrequency(Integer.parseInt(frequency));
                     logger.info("characters: " + data);
                     break;
                 case VOLUME:

@@ -34,6 +34,7 @@ public class XmlValidator {
             logger.log(Level.ERROR, "XML fail is not valid with XSD scheme: {}", xsdFilePath, xmlFilePath, e);
             result = false;
         }
+        logger.log(Level.INFO, "The file is valid ");
         return result;
     }
 

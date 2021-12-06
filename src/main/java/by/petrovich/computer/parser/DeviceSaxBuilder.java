@@ -22,7 +22,7 @@ public class DeviceSaxBuilder implements DeviceBuilder {
     }
 
     @Override
-    public void deviceSaxBuilder(String filePath) throws DeviceException {
+    public void parseDevices(String filePath) throws DeviceException {
         try {
             SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
             SAXParser saxParser = saxParserFactory.newSAXParser();
@@ -43,6 +43,6 @@ public class DeviceSaxBuilder implements DeviceBuilder {
 
     @Override
     public List<DeviceAbstract> getDevices() {
-        return devices;
+        return List.copyOf(devices);
     }
 }

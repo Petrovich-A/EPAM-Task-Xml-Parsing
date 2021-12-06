@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+        targetNamespace="http://www.example.com/computers" xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:com="http://www.example.com/computers">
+
+    <element name="abstract-device" abstract="true" type="com:Device"/>
+    <element name="cpu" substitutionGroup="com:abstract-device" type="com:Cpu"/>
+    <element name="hdd" substitutionGroup="com:abstract-device" type="com:Hdd"/>
+
+    <element name="devices">
+        <complexType>
+            <sequence>
+                <element ref="com:abstract-device"
+                         minOccurs="2" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="Device">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="delivery-date" type="date"/>
+            <element name="country">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="Canada"/>
+                        <enumeration value="Taiwan"/>
+                        <enumeration value="Singapore"/>
+                        <enumeration value="USA"/>
+                        <enumeration value="Israel"/>
+                        <enumeration value="Belarus"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="price">
+                <simpleType>
+                    <restriction base="double">
+                        <minInclusive value="0.0"/>
+                        <maxInclusive value="10000.0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="property">
+                <complexType>
+                    <sequence>
+                        <element name="peripheral">
+                            <simpleType>
+                                <restriction base="string">
+                                    <enumeration value="in case"/>
+                                    <enumeration value="output device"/>
+                                    <enumeration value="input device"/>
+                                </restriction>
+                            </simpleType>
+                        </element>
+                        <element name="port"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="critical" type="boolean" default="true"></element>
+        </sequence>
+        <attribute name="id" use="required" type="com:DeviceID"/>
+        <attribute type="string" name="picture" use="optional" default="pic.png"/>
+    </complexType>
+
+    <simpleType name="DeviceID">
+        <restriction base="ID">
+            <pattern value="[A-Z]{2}\d+"></pattern>
+        </restriction>
+    </simpleType>
+
+    <complexType name="Cpu">
+        <complexContent>
+            <extension base="com:Device">
+                <sequence>
+                    <element name="frequency" type="double"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="Hdd">
+        <complexContent>
+            <extension base="com:Device">
+                <sequence>
+                    <element name="volume" type="double"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+</schema>
