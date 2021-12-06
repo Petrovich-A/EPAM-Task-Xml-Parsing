@@ -18,6 +18,9 @@ public class DeviceSaxBuilder implements DeviceBuilder {
     private static final Logger logger = LogManager.getLogger();
     private List<DeviceAbstract> devices;
 
+    public DeviceSaxBuilder() {
+    }
+
     @Override
     public void deviceSaxBuilder(String filePath) throws DeviceException {
         try {
@@ -29,14 +32,13 @@ public class DeviceSaxBuilder implements DeviceBuilder {
             reader.parse(filePath);
             devices = handler.getDevices();
         } catch (ParserConfigurationException e) {
-            throw new DeviceException("", e);
+            throw new DeviceException("The file can't be red", e);
         } catch (EnumConstantNotPresentException | SAXException e) {
-            throw new DeviceException("", e);
+            throw new DeviceException("The file can't be parsed", e);
         } catch (IOException e) {
             throw new DeviceException("", e);
         }
-        logger.log(Level.INFO, "Devices are created");
-
+        logger.log(Level.INFO, "The devices are created");
     }
 
     @Override

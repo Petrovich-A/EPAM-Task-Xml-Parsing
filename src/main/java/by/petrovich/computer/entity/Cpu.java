@@ -3,6 +3,8 @@ package by.petrovich.computer.entity;
 import by.petrovich.computer.entity.type.Country;
 import by.petrovich.computer.entity.type.Peripheral;
 
+import java.time.LocalDate;
+
 public class Cpu extends DeviceAbstract {
     private int sequanse;
 
@@ -13,7 +15,7 @@ public class Cpu extends DeviceAbstract {
         this.sequanse = sequanse;
     }
 
-    public Cpu(String deviceId, String picture, String name, String deliveryDate, Country country, String price, Peripheral peripheral, String port, boolean critical, int sequanse) {
+    public Cpu(String deviceId, String picture, String name, LocalDate deliveryDate, Country country, double price, Peripheral peripheral, String port, boolean critical, int sequanse) {
         super(deviceId, picture, name, deliveryDate, country, price, peripheral, port, critical);
         this.sequanse = sequanse;
     }

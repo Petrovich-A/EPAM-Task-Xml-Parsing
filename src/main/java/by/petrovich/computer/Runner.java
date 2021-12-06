@@ -1,5 +1,8 @@
 package by.petrovich.computer;
 
+import by.petrovich.computer.entity.DeviceAbstract;
+import by.petrovich.computer.entity.type.Country;
+import by.petrovich.computer.entity.type.Peripheral;
 import by.petrovich.computer.exception.DeviceException;
 import by.petrovich.computer.parser.DeviceHandler;
 import by.petrovich.computer.parser.DeviceSaxBuilder;
@@ -20,8 +23,6 @@ public class Runner {
         }
 
         DeviceHandler deviceHandler = new DeviceHandler();
-
-
 
     }
 }

@@ -3,6 +3,8 @@ package by.petrovich.computer.entity;
 import by.petrovich.computer.entity.type.Country;
 import by.petrovich.computer.entity.type.Peripheral;
 
+import java.time.LocalDate;
+
 public class Hdd extends DeviceAbstract {
     private int volume;
 
@@ -13,7 +15,7 @@ public class Hdd extends DeviceAbstract {
         this.volume = volume;
     }
 
-    public Hdd(String deviceId, String picture, String name, String deliveryDate, Country country, String price, Peripheral peripheral, String port, boolean critical, int volume) {
+    public Hdd(String deviceId, String picture, String name, LocalDate deliveryDate, Country country, double price, Peripheral peripheral, String port, boolean critical, int volume) {
         super(deviceId, picture, name, deliveryDate, country, price, peripheral, port, critical);
         this.volume = volume;
     }

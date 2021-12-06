@@ -146,9 +146,69 @@
         <volume>12</volume>
     </hdd>
 
+    <hdd id="ID12">
+        <name>HDD 4 Tb SATA 6Gb</name>
+        <delivery-date>2020-07-28</delivery-date>
+        <country>USA</country>
+        <price>114.10</price>
+        <property>
+            <peripheral>in case</peripheral>
+            <port>SATA</port>
+        </property>
+        <critical>true</critical>
+        <volume>4</volume>
+    </hdd>
 
+    <hdd id="ID13">
+        <name>HDD 8 Tb SATA 6Gb</name>
+        <delivery-date>2020-03-15</delivery-date>
+        <country>USA</country>
+        <price>109.18</price>
+        <property>
+            <peripheral>in case</peripheral>
+            <port>SATA</port>
+        </property>
+        <critical>true</critical>
+        <volume>6</volume>
+    </hdd>
 
+    <hdd id="ID14">
+        <name>HDD 18 Tb SAS 12Gb Western Digital</name>
+        <delivery-date>2020-03-15</delivery-date>
+        <country>USA</country>
+        <price>109.18</price>
+        <property>
+            <peripheral>in case</peripheral>
+            <port>SATA</port>
+        </property>
+        <critical>true</critical>
+        <volume>18</volume>
+    </hdd>
 
+    <hdd id="ID15">
+        <name>HDD Western Digital Red Plus</name>
+        <delivery-date>2020-04-12</delivery-date>
+        <country>USA</country>
+        <price>95.99</price>
+        <property>
+            <peripheral>in case</peripheral>
+            <port>USB</port>
+        </property>
+        <critical>true</critical>
+        <volume>6</volume>
+    </hdd>
 
+    <hdd id="ID16">
+        <name>HDD Western Digital Red</name>
+        <delivery-date>2020-04-12</delivery-date>
+        <country>Taiwan</country>
+        <price>95.99</price>
+        <property>
+            <peripheral>in case</peripheral>
+            <port>SATA</port>
+        </property>
+        <critical>true</critical>
+        <volume>6</volume>
+    </hdd>
 
 </devices>

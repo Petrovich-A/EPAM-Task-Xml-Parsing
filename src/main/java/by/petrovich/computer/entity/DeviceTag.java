@@ -1,6 +1,7 @@
 package by.petrovich.computer.entity;
 
 public enum DeviceTag {
+    DEVICES,
     CPU,
     HDD,
 

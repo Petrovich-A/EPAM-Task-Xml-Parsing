@@ -3,14 +3,16 @@ package by.petrovich.computer.entity;
 import by.petrovich.computer.entity.type.Country;
 import by.petrovich.computer.entity.type.Peripheral;
 
+import java.time.LocalDate;
+
 public abstract class DeviceAbstract {
     public static final String DEFAULT_PICTURE = "pic.png";
     private String deviceId;
     private String picture;
     private String name;
-    private String deliveryDate;
+    private LocalDate deliveryDate;
     private Country country;
-    private String price;
+    private double price;
     private Peripheral peripheral;
     private String port;
     private boolean critical;
@@ -18,7 +20,7 @@ public abstract class DeviceAbstract {
     protected DeviceAbstract() {
     }
 
-    public DeviceAbstract(String deviceId, String picture, String name, String deliveryDate, Country country, String price, Peripheral peripheral, String port, boolean critical) {
+    public DeviceAbstract(String deviceId, String picture, String name, LocalDate deliveryDate, Country country, double price, Peripheral peripheral, String port, boolean critical) {
         this.deviceId = deviceId;
         this.picture = picture;
         this.name = name;
@@ -29,6 +31,7 @@ public abstract class DeviceAbstract {
         this.port = port;
         this.critical = critical;
     }
+
 
     public static String getDefaultPicture() {
         return DEFAULT_PICTURE;
@@ -58,11 +61,11 @@ public abstract class DeviceAbstract {
         this.name = name;
     }
 
-    public String getDeliveryDate() {
+    public LocalDate getDeliveryDate() {
         return deliveryDate;
     }
 
-    public void setDeliveryDate(String deliveryDate) {
+    public void setDeliveryDate(LocalDate deliveryDate) {
         this.deliveryDate = deliveryDate;
     }
 
@@ -74,11 +77,11 @@ public abstract class DeviceAbstract {
         this.country = country;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -111,30 +114,32 @@ public abstract class DeviceAbstract {
         if (this == o) return true;
         if (!(o instanceof DeviceAbstract)) return false;
 
-        DeviceAbstract device = (DeviceAbstract) o;
+        DeviceAbstract that = (DeviceAbstract) o;
 
-        if (isCritical() != device.isCritical()) return false;
-        if (getDeviceId() != null ? !getDeviceId().equals(device.getDeviceId()) : device.getDeviceId() != null)
+        if (Double.compare(that.getPrice(), getPrice()) != 0) return false;
+        if (isCritical() != that.isCritical()) return false;
+        if (getDeviceId() != null ? !getDeviceId().equals(that.getDeviceId()) : that.getDeviceId() != null)
             return false;
-        if (getPicture() != null ? !getPicture().equals(device.getPicture()) : device.getPicture() != null)
+        if (getPicture() != null ? !getPicture().equals(that.getPicture()) : that.getPicture() != null) return false;
+        if (getName() != null ? !getName().equals(that.getName()) : that.getName() != null) return false;
+        if (getDeliveryDate() != null ? !getDeliveryDate().equals(that.getDeliveryDate()) : that.getDeliveryDate() != null)
             return false;
-        if (getName() != null ? !getName().equals(device.getName()) : device.getName() != null) return false;
-        if (getDeliveryDate() != null ? !getDeliveryDate().equals(device.getDeliveryDate()) : device.getDeliveryDate() != null)
-            return false;
-        if (getCountry() != device.getCountry()) return false;
-        if (getPrice() != null ? !getPrice().equals(device.getPrice()) : device.getPrice() != null) return false;
-        if (getPeripheral() != device.getPeripheral()) return false;
-        return getPort() != null ? getPort().equals(device.getPort()) : device.getPort() == null;
+        if (getCountry() != that.getCountry()) return false;
+        if (getPeripheral() != that.getPeripheral()) return false;
+        return getPort() != null ? getPort().equals(that.getPort()) : that.getPort() == null;
     }
 
     @Override
     public int hashCode() {
-        int result = getDeviceId() != null ? getDeviceId().hashCode() : 0;
+        int result;
+        long temp;
+        result = getDeviceId() != null ? getDeviceId().hashCode() : 0;
         result = 31 * result + (getPicture() != null ? getPicture().hashCode() : 0);
         result = 31 * result + (getName() != null ? getName().hashCode() : 0);
         result = 31 * result + (getDeliveryDate() != null ? getDeliveryDate().hashCode() : 0);
         result = 31 * result + (getCountry() != null ? getCountry().hashCode() : 0);
-        result = 31 * result + (getPrice() != null ? getPrice().hashCode() : 0);
+        temp = Double.doubleToLongBits(getPrice());
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + (getPeripheral() != null ? getPeripheral().hashCode() : 0);
         result = 31 * result + (getPort() != null ? getPort().hashCode() : 0);
         result = 31 * result + (isCritical() ? 1 : 0);
