@@ -11,14 +11,12 @@ public class Cpu extends DeviceAbstract {
     public Cpu() {
     }
 
-
-
-    public Cpu(String deviceId, String picture, String name, LocalDate deliveryDate, Country country, double price, Peripheral peripheral, String port, boolean critical, int sequanse) {
+    public Cpu(String deviceId, String picture, String name, LocalDate deliveryDate, Country country, double price, Peripheral peripheral, String port, boolean critical, int frequency) {
         super(deviceId, picture, name, deliveryDate, country, price, peripheral, port, critical);
-        this.frequency = sequanse;
+        this.frequency = frequency;
     }
 
-    public int sequanse() {
+    public int frequency() {
         return frequency;
     }
 
@@ -48,7 +46,7 @@ public class Cpu extends DeviceAbstract {
     public String toString() {
         final StringBuffer sb = new StringBuffer("Cpu{");
         sb.append(super.toString());
-        sb.append("sequanse=").append(frequency);
+        sb.append("frequency=").append(frequency);
         sb.append('}');
         return sb.toString();
     }
