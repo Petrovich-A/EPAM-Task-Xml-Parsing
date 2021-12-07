@@ -1,6 +1,9 @@
 package by.petrovich.computer.parser;
 
+import by.petrovich.computer.entity.Cpu;
 import by.petrovich.computer.entity.DeviceAbstract;
+import by.petrovich.computer.entity.DeviceTag;
+import by.petrovich.computer.entity.Hdd;
 import by.petrovich.computer.entity.type.DeviceType;
 import by.petrovich.computer.exception.DeviceException;
 import org.apache.logging.log4j.Level;
@@ -16,6 +19,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class DeviceStaxBuilder implements DeviceBuilder {
     private static final Logger logger = LogManager.getLogger();
@@ -61,5 +65,39 @@ public class DeviceStaxBuilder implements DeviceBuilder {
         return devices;
     }
 
-    
+    private DeviceAbstract devicesBuild(XMLStreamReader xmlStreamReader) throws XMLStreamException {
+        DeviceAbstract deviceAbstract;
+        DeviceType deviceType = DeviceType.valueOf(xmlStreamReader.getLocalName().toUpperCase(Locale.ROOT));
+        deviceAbstract = switch (deviceType) {
+            case CPU:
+                deviceAbstract = new Cpu();
+                break;
+            case HDD:
+                deviceAbstract = new Hdd();
+                break;
+            default:
+                deviceAbstract = null;
+                throw new RuntimeException();
+        };
+        String id = xmlStreamReader.getAttributeValue(null, DeviceTag.ID.toString());
+        deviceAbstract.setDeviceId(id);
+        String picture = xmlStreamReader.getAttributeValue(null, DeviceTag.PICTURE.toString());
+        if (picture == null) {
+            picture = DeviceAbstract.DEFAULT_PICTURE;
+        }
+        deviceAbstract.setPicture(picture);
+        String name;
+        while (xmlStreamReader.hasNext()) {
+            int type = xmlStreamReader.next();
+            switch (type) {
+                case XMLStreamConstants.START_ELEMENT: {
+                    name = xmlStreamReader.getLocalName().toUpperCase(Locale.ROOT).replace(HYPHEN, UNDERSCORE);
+                    if (DeviceTag.valueOf(name) == DeviceTag.CPU || DeviceTag.valueOf(name) == DeviceTag.HDD) {
+                        return deviceAbstract;
+                    }
+                }
+
+            }
+        }
+    }
 }
