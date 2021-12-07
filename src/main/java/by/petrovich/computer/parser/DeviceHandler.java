@@ -16,7 +16,6 @@ import org.xml.sax.helpers.DefaultHandler;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.EnumSet;
 import java.util.List;
 import java.util.Locale;
 
@@ -29,11 +28,9 @@ public class DeviceHandler extends DefaultHandler {
     private final List<DeviceAbstract> devices;
     private DeviceAbstract currentDevice;
     private DeviceTag currentTag;
-    private EnumSet<DeviceTag> withText;
 
     public DeviceHandler() {
         devices = new ArrayList<>();
-//        withText = EnumSet.range(DeviceTag.NAME, DeviceTag.VOLUME);
     }
 
     public List<DeviceAbstract> getDevices() {
@@ -74,9 +71,7 @@ public class DeviceHandler extends DefaultHandler {
             }
         } else {
             DeviceTag deviceTag = DeviceTag.valueOf(name);
-//            if (withText.contains(deviceTag)) {
-                currentTag = deviceTag;
-//            }
+            currentTag = deviceTag;
         }
         logger.info("DeviceHandler: " + name.trim());
     }

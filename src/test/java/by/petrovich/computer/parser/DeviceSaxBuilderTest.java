@@ -20,7 +20,7 @@ public class DeviceSaxBuilderTest {
     public void testDeviceSaxBuilder() throws DeviceException {
 
         DeviceSaxBuilder deviceSaxBuilder = new DeviceSaxBuilder();
-        deviceSaxBuilder.parseDevices(filePath);
+        deviceSaxBuilder.devicesBuilder(filePath);
         List<DeviceAbstract> actual = deviceSaxBuilder.getDevices();
         List<DeviceAbstract> expected = List.of(new Cpu("ID1", "pic1.png", "AMD A4-5300 APU OEM",
                 LocalDate.of(2021, 10, 03), Country.CANADA, 65.24, Peripheral.IN_CASE,

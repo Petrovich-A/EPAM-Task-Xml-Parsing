@@ -13,7 +13,7 @@ public class Runner {
         DeviceSaxBuilder deviceSaxBuilder = new DeviceSaxBuilder();
         xmlValidator.isFileValid("src/main/resources/files/computers.xml","src/main/resources/files/computers.xsd");
         try {
-            deviceSaxBuilder.parseDevices("src/main/resources/files/computers.xml");
+            deviceSaxBuilder.devicesBuilder("src/main/resources/files/computers.xml");
         } catch (DeviceException e) {
             e.printStackTrace();
         }
